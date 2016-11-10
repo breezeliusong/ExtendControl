@@ -79,11 +79,11 @@ namespace ExtendControl
         {
             if (button.IsChecked.Value)
             {
-                VisualStateManager.GoToState(this, "Expanded", useTransition);
+                button.Content =  "";
             }
             else
             {
-                VisualStateManager.GoToState(this, "Normal", useTransition);
+                button.Content = "";
             }
         }
 

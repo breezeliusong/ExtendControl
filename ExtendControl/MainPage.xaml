@@ -11,7 +11,10 @@
         <local:Expansion >
             <local:Expansion.Header>jiushiyigetou</local:Expansion.Header>
             <local:Expansion.Content>
+                <StackPanel>
                 <Button Content="akshdfkljasbndglka"/>
+                <Image  Source="/Assets/StoreLogo.png"/>
+                </StackPanel>
             </local:Expansion.Content>
         </local:Expansion>
 
