@@ -63,11 +63,15 @@ namespace ExtendControl.MyUserControl
             IsExpand = !IsExpand;
             if (IsExpand)
             {
-                ShowAndHide.Content = "";
+                //using change content
+                //ShowAndHide.Content = "";
+                RotateBack.Begin();//using animation
             }
             else
             {
-                ShowAndHide.Content = "";
+                //using change content
+                //ShowAndHide.Content = "";
+                Rotate.Begin();//using animation
             }
         }
     }

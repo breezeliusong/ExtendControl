@@ -10,12 +10,35 @@
     d:DesignWidth="400">
 
     <Grid>
+        <Grid.Resources>
+            <Storyboard x:Name="Rotate">
+                <DoubleAnimation
+                        Storyboard.TargetName="myTransform"
+                        Storyboard.TargetProperty="Angle"
+                        From="0" To="180" Duration="0:0:0.5" 
+                        />
+            </Storyboard>
+            <Storyboard x:Name="RotateBack">
+                <DoubleAnimation
+                        Storyboard.TargetName="myTransform"
+                        Storyboard.TargetProperty="Angle"
+                        From="180" To="0" Duration="0:0:0.5" 
+                        />
+            </Storyboard>
+        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <Button Name="ShowAndHide" Content="&#xE010;" Click="ShowAndHide_Click" FontFamily="Segoe MDL2 Assets"/>
+            <Button Name="ShowAndHide" Content="&#xE010;" 
+                    Click="ShowAndHide_Click" 
+                    RenderTransformOrigin="0.5,0.5"
+                    FontFamily="Segoe MDL2 Assets">
+                <Button.RenderTransform>
+                    <RotateTransform x:Name="myTransform"/>
+                </Button.RenderTransform>
+            </Button>
             <TextBlock Name="TextHeader"
                        Margin="10,0,0,0"
                        TextWrapping="Wrap"
