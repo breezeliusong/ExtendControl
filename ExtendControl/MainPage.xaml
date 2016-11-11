@@ -5,18 +5,30 @@
     xmlns:local="using:ExtendControl"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:user="using:ExtendControl.MyUserControl"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <local:Expansion >
-            <local:Expansion.Header>jiushiyigetou</local:Expansion.Header>
-            <local:Expansion.Content>
-                <StackPanel>
-                <Button Content="akshdfkljasbndglka"/>
-                <Image  Source="/Assets/StoreLogo.png"/>
-                </StackPanel>
-            </local:Expansion.Content>
-        </local:Expansion>
+    <ScrollViewer>
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <local:Expansion >
+                <local:Expansion.Header>customcontrol</local:Expansion.Header>
+                <local:Expansion.Content>
+                    <StackPanel>
+                        <Button Content="customcontrol"/>
+                        <Image  Source="/Assets/StoreLogo.png"/>
+                    </StackPanel>
+                </local:Expansion.Content>
+            </local:Expansion>
 
-    </Grid>
+            <user:ExtensionUserControl>
+                <user:ExtensionUserControl.Header>usercontrol</user:ExtensionUserControl.Header>
+                <user:ExtensionUserControl.ContentPosition>
+                    <StackPanel>
+                        <Button Content="usercontrol"/>
+                        <Image  Source="/Assets/StoreLogo.png"/>
+                    </StackPanel>
+                </user:ExtensionUserControl.ContentPosition>
+            </user:ExtensionUserControl>
+        </StackPanel>
+    </ScrollViewer>
 </Page>

@@ -68,7 +68,6 @@ namespace ExtendControl
             button.Loaded += (s, e) => { ChangeControlState(false); };
             button.Checked += (s, e) => { ChangeControlState(); };
             button.Unchecked += (s, e) => { ChangeControlState(); };
-
         }
 
         /// <summary>

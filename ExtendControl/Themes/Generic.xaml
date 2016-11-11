@@ -2,12 +2,6 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ExtendControl">
-    <Storyboard x:Name="myStoryboard">
-        <DoubleAnimation
-              Storyboard.TargetName="toggleButton"
-              From="0" To="180" Duration="0:0:1" />
-    </Storyboard>
-
     <Style TargetType="local:Expansion" >
         <Setter Property="Template">
             <Setter.Value>
@@ -18,7 +12,7 @@
                         BorderThickness="{TemplateBinding BorderThickness}">
 
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Grid>
@@ -33,7 +27,7 @@
                                       FontFamily="Segoe MDL2 Assets"
                                       Grid.Column="0">
                             </ToggleButton>
-                            <ContentPresenter Content="{TemplateBinding Header}" Grid.Column="1"/>
+                            <ContentPresenter Content="{TemplateBinding Header}" Grid.Column="1" Margin="10,0,0,0" Height="Auto"/>
                         </Grid>
                         
                         <ContentPresenter Grid.Row="1"
