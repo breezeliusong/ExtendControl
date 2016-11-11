@@ -64,14 +64,14 @@ namespace ExtendControl.MyUserControl
             if (IsExpand)
             {
                 //using change content
-                //ShowAndHide.Content = "";
-                RotateBack.Begin();//using animation
+                ShowAndHide.Content = "";
+                //RotateBack.Begin();//using animation
             }
             else
             {
                 //using change content
-                //ShowAndHide.Content = "";
-                Rotate.Begin();//using animation
+                ShowAndHide.Content = "";
+                //Rotate.Begin();//using animation
             }
         }
     }
